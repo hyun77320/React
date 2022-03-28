@@ -5,16 +5,12 @@ import Say from "./Say"; //eslint-disable-line
 import EventPractice from "./EventPractice"; //eslint-disable-line
 import ValidationSample from "./ValidationSample"; //eslint-disable-line
 import ScrollBox from "./ScrollBox"; //eslint-disable-line
+import IterationSample from "./IterationSample"; //eslint-disable-line
 
 class App extends Component{
     render() {
         return (
-            <div>
-                <ScrollBox ref={(ref) => this.scrollBox = ref}/>
-                <button onClick={() => this.scrollBox.scrollToBottom()}>
-                    맨 밑으로
-                </button>
-            </div>
+            <IterationSample />
         );
     }
 };
