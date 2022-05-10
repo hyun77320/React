@@ -80,7 +80,13 @@ const EventPractice = () => {
     };
     const onKeyPress = e => {
         if (e.key === 'Enter') {
-            onClick();
+            if (username === '') {
+                alert('사용자명을 입력하세요.')
+            }
+            else if (message === '') {
+                alert('메세지를 입력하세요.')
+            }
+            else onClick();
         }
     };
 
@@ -92,7 +98,8 @@ const EventPractice = () => {
                 name='username'
                 placeholder='사용자명'
                 value={username}
-                onChange={onChange}                    
+                onChange={onChange}
+                onKeyPress={onKeyPress}
             />
             <input
                 type='text'

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const Say = () => {
-    const [message, setMessage] = useState(""); // eslint-disable-line no-unused-vars
-    const onClickEnter = () => setMessage("안녕하세요!");
+    const [message, setMessage] = useState("안녕하세요"); // eslint-disable-line no-unused-vars
+    const onClickEnter = () => setMessage("어서오세요~");
     const onClickLeave = () => setMessage("안녕히 가세요!");
 
     const [color, setColor] = useState("black");
