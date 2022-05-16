@@ -55,7 +55,7 @@
 
 
 
-import React, { useState } from 'react'; // 함수형
+import React, { useEffect, useState } from 'react'; // 함수형
 
 const EventPractice = () => {
     const [form, setForm] = useState({
@@ -72,11 +72,19 @@ const EventPractice = () => {
     };
     
     const onClick = () => {
-        alert(username + ':' + message);
-        setForm({
-            username: '',
-            message: ''
-        })
+        if (username === '') {
+            alert('사용자명을 입력하세요.')
+        }
+        else if (message === '') {
+            alert('메세지를 입력하세요.')
+        }
+        else {
+            alert(username + ':' + message);
+            setForm({
+                username: '',
+                message: ''
+            })
+        }
     };
     const onKeyPress = e => {
         if (e.key === 'Enter') {

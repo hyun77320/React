@@ -10,7 +10,7 @@ import LifeCycleSample from "./LifeCycleSample"; //eslint-disable-line
 import ErrorBoundary from "./ErrorBoundary"; //eslint-disable-line
 
 function App() {
-    return <EventPractice />
+    return <ValidationSample />
 }
 
 export default App;
